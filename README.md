@@ -13,6 +13,8 @@ Integrantes:
 
 ## Enlaces
 - [Trello](https://trello.com/dsm241/home)
+- [Mockups](https://www.figma.com/file/2JHRuQyh5bdsmi4vlRwlyw/Mockups-DSM?node-id=0%3A1)
+
 
 ## Licencia
 Licencia Creative Commons, ver archivo LICENSE
