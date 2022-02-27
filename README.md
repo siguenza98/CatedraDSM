@@ -13,4 +13,4 @@ Integrantes:
 - [Trello](https://trello.com/dsm241/home)
 
 ## Licencia
-Licencia Creative Commons, ver archivo LICENCE
+Licencia Creative Commons, ver archivo LICENSE
