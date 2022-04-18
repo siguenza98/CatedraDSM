@@ -9,6 +9,7 @@ public class UserModel {
     private String contraseña;
 
     public UserModel(int id, String nombre, String apellido, String telefono, String correo, String contraseña) {
+
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;

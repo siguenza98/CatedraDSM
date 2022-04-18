@@ -17,6 +17,7 @@ import org.json.JSONObject;
 import sv.edu.udb.catedradsm.models.ConexionModel;
 
 public class UserController {
+    //EL CONTROLADOR SE CONECTA AL MODELO PARA REALIZAR LA PETICION
     String url = "https://udbdsmapi.000webhostapp.com/api/user";
     Context context;
     String respuesta = "";
@@ -32,13 +33,18 @@ public class UserController {
 
     public void realizarPeticion(VolleyResponseListener volleyResponseListener){
 
+    public AppController(Context context) {
+        this.context = context;
+    }
+
+    public String realizarPeticion(){
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null,new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
                 try{
                     volleyResponseListener.onResponse(response);
                 }catch(Exception e){
-                    Toast.makeText(context, "Hubo un error al realizar la petición", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Hubo un error al realizar la petición", Toast.LENGTH_SHORT).show();         
                 }
             }
         }, new Response.ErrorListener() {
@@ -49,5 +55,6 @@ public class UserController {
 
         });
         ConexionModel.getInstance(context).addToRequestQueue(request);
+
     }
 }
