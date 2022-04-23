@@ -1,9 +1,15 @@
 <resources>
     <string name="app_name">CatedraDSM</string>
+
+<!--    CREAR CUENTA-->
     <string name="nombre_completo_crear_cuenta">Nombre completo</string>
     <string name="correo_electronico_crear_cuenta">Correo electrónico</string>
     <string name="contrasena_crear_cuenta">Contraseña</string>
     <string name="repetir_contrasena_crear_cuenta">Repetir contraseña</string>
     <string name="btn_crear_cuenta">Crear cuenta</string>
     <string name="txt_inicia_sesion_crear_cuenta">¿Ya tienes una cuenta? inicia sesión</string>
+
+<!--    CONFIGURACION DE CUENTA-->
+    <string name="btn_cerrar_sesion_configuracion_de_cuenta">Cerrar sesión</string>
+    <string name="btn_guardar_datos_configuracion_de_cuenta">Guardar datos</string>
 </resources>
