@@ -32,6 +32,9 @@ public class UserModel {
         this.telefono = telefono;
         this.correo = correo;
     }
+    public UserModel() {
+
+    }
 
     public int getId() {
         return id;

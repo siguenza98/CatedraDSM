@@ -2,6 +2,7 @@ package sv.edu.udb.catedradsm;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +13,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.List;
+
 import sv.edu.udb.catedradsm.controllers.UserController;
 import sv.edu.udb.catedradsm.models.UserModel;
 
@@ -19,7 +22,8 @@ public class Login extends AppCompatActivity {
     UserController userController = new UserController(Login.this);
     private EditText txtCorreo, txtPassword;
     private Button btnLogin;
-
+    private SharedPreferences pref = getApplicationContext()
+            .getSharedPreferences("usuario", 0);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,8 +47,17 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
+
+        verificarLogin();
     }
 
+    public void verificarLogin(){
+        String correo = pref.getString("correo", null); // getting
+        if(correo != "" && correo.length() != 0){
+            Toast.makeText(Login.this, "logueado", Toast.LENGTH_SHORT).show();
+
+        }
+    };
     public void iniciarSesion(String correo, String pass){
 
         userController.iniciarSesion(correo, pass, new UserController.VolleyResponseListener() {
@@ -55,7 +68,36 @@ public class Login extends AppCompatActivity {
 
             @Override
             public void onResponse(Object respuesta) {
-                Toast.makeText(Login.this, respuesta.toString(), Toast.LENGTH_LONG).show();
+                try {
+                    JSONObject obj = new JSONObject(respuesta.toString());
+
+                    String mensaje = obj.getString("respuesta");
+                    String code = obj.getString("code");
+
+                    if(mensaje.equals("OK")){
+                        SharedPreferences.Editor editor = pref.edit();
+
+                        JSONObject userData = obj.getJSONObject("user");
+
+                        String userCorreo = userData.getString("correo");
+                        editor.putString("correo", userCorreo);
+
+                        String userNombre = userData.getString("nombre");
+                        editor.putString("nombre", userNombre);
+
+                        String userApellido = userData.getString("apellido");
+                        editor.putString("apellido", userApellido);
+
+                        String userTelefono = userData.getString("telefono");
+                        editor.putString("telefono", userTelefono);
+                        
+                    }else{
+                        Toast.makeText(Login.this, mensaje, Toast.LENGTH_SHORT).show();
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
             }
         });
     }

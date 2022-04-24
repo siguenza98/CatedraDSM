@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+    /*
         userController.realizarPeticion(new UserController.VolleyResponseListener() {
             @Override
             public void onError(String mensaje) {
@@ -26,5 +26,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, respuesta.toString(), Toast.LENGTH_LONG).show();
             }
         });
+
+     */
     }
 }

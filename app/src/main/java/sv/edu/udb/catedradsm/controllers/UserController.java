@@ -35,6 +35,7 @@ public class UserController {
         void onResponse(Object respuesta);
     }
 
+    /*
     public void realizarPeticion(VolleyResponseListener volleyResponseListener){
 
         JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null,new Response.Listener<JSONArray>() {
@@ -55,6 +56,7 @@ public class UserController {
         });
         ConexionModel.getInstance(context).addToRequestQueue(request);
     }
+    */
 
     public void iniciarSesion(String correo, String pass, VolleyResponseListener volleyResponseListener){
         String apiUrl ="https://udbdsmapi.000webhostapp.com/login";
@@ -72,7 +74,7 @@ public class UserController {
 
                         volleyResponseListener.onResponse(response);
                     }catch(Exception e){
-                        Toast.makeText(context, "Hubo un error al realizar la petición", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show();
                     }
                 }
             }, new Response.ErrorListener() {
