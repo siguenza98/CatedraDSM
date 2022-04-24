@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">CatedraDSM</string>
+
+    <string name="login_correo">Correo Electrónico</string>
+    <string name="login_contra">Contraseña</string>
+    <string name="login_iniciar_sesion">INICIAR SESIÓN</string>
+    <string name="login_crear_cuenta">¿No posees una cuenta? ¡Registrate!</string>
+
+
+
+
 </resources>
