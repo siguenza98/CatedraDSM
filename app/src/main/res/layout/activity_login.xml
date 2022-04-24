@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.061"
-        tools:srcCompat="@mipmap/logo2" />
+        android:src="@mipmap/logo2" />
 
 
     <EditText
@@ -51,11 +51,10 @@
         app:layout_constraintVertical_bias="0.554" />
 
     <Button
-        android:id="@+id/btnCrearCuenta"
-        android:onClick="iniciarSesion"
+        android:id="@+id/btnLogin"
         style="@style/Widget.Material3.Button.ElevatedButton.Icon"
         android:layout_width="350dp"
-        android:layout_height="70dp"
+        android:layout_height="75dp"
         android:background="@color/terciario"
         android:textColor="@color/secundario"
         android:text="@string/login_iniciar_sesion"
@@ -71,12 +70,12 @@
 
     <TextView
         android:id="@+id/txtCrearCuenta"
-        android:layout_width="269dp"
+        android:layout_width="250dp"
         android:layout_height="33dp"
         android:text="@string/login_crear_cuenta"
         android:textAlignment="center"
         android:textColor="@color/secundario"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
