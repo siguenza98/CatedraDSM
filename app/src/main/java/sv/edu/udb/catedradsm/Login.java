@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import org.json.JSONArray;
@@ -21,6 +22,7 @@ import sv.edu.udb.catedradsm.models.UserModel;
 public class Login extends AppCompatActivity {
     UserController userController = new UserController(Login.this);
     private EditText txtCorreo, txtPassword;
+    private TextView txtCrearCuenta;
     private Button btnLogin;
     SharedPreferences sharedpreferences;
 
@@ -31,6 +33,7 @@ public class Login extends AppCompatActivity {
 
         txtCorreo = (EditText)findViewById(R.id.txtCorreo);
         txtPassword = (EditText)findViewById(R.id.txtPassword);
+        txtCrearCuenta = (TextView)findViewById(R.id.txtCrearCuenta);
         btnLogin = (Button)findViewById(R.id.btnLogin);
 
 
@@ -48,6 +51,15 @@ public class Login extends AppCompatActivity {
             }
         });
 
+        txtCrearCuenta.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Toast.makeText(Login.this, "CLICK", Toast.LENGTH_SHORT).show();
+
+               //REDIRECCIONAR A CREAR CUENTA
+            }
+        });
+
         sharedpreferences = getSharedPreferences("usuario", 0);
         verificarLogin();
     }
@@ -58,8 +70,8 @@ public class Login extends AppCompatActivity {
 
 
         if(correo != null){
-            Toast.makeText(Login.this, "logueado", Toast.LENGTH_SHORT).show();
-
+            //Toast.makeText(Login.this, "logueado", Toast.LENGTH_SHORT).show();
+            //REDIRECCIONAR A VISTA PRINCIPAL
         }
 
 
