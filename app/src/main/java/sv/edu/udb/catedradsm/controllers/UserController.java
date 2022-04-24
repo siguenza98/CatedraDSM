@@ -89,8 +89,6 @@ public class UserController {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
-
     }
 
     public static String sha256(final String base) {

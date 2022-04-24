@@ -22,8 +22,8 @@ public class Login extends AppCompatActivity {
     UserController userController = new UserController(Login.this);
     private EditText txtCorreo, txtPassword;
     private Button btnLogin;
-    private SharedPreferences pref = getApplicationContext()
-            .getSharedPreferences("usuario", 0);
+    SharedPreferences sharedpreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,15 +48,21 @@ public class Login extends AppCompatActivity {
             }
         });
 
+        sharedpreferences = getSharedPreferences("usuario", 0);
         verificarLogin();
     }
 
     public void verificarLogin(){
-        String correo = pref.getString("correo", null); // getting
-        if(correo != "" && correo.length() != 0){
+        String correo = sharedpreferences.getString("correo", null); // getting
+        //Toast.makeText(Login.this, correo, Toast.LENGTH_SHORT).show();
+
+
+        if(correo != null){
             Toast.makeText(Login.this, "logueado", Toast.LENGTH_SHORT).show();
 
         }
+
+
     };
     public void iniciarSesion(String correo, String pass){
 
@@ -75,7 +81,8 @@ public class Login extends AppCompatActivity {
                     String code = obj.getString("code");
 
                     if(mensaje.equals("OK")){
-                        SharedPreferences.Editor editor = pref.edit();
+
+                        SharedPreferences.Editor editor = sharedpreferences.edit();
 
                         JSONObject userData = obj.getJSONObject("user");
 
@@ -90,7 +97,7 @@ public class Login extends AppCompatActivity {
 
                         String userTelefono = userData.getString("telefono");
                         editor.putString("telefono", userTelefono);
-                        
+                        editor.apply();
                     }else{
                         Toast.makeText(Login.this, mensaje, Toast.LENGTH_SHORT).show();
                     }
