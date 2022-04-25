@@ -7,55 +7,17 @@
     android:background="#FFCDD2"
     tools:context=".crearCuenta">
 
-    <EditText
-        android:id="@+id/txtApellidoCrearCuenta"
-        android:layout_width="269dp"
-        android:layout_height="49dp"
-        android:ems="10"
-        android:hint="@string/apellido_crear_cuenta"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.403" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/apellido_crear_cuenta"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.358" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/telefono_crear_cuenta"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.197"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.469" />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="163dp"
         android:layout_height="121dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.061"
-        tools:srcCompat="@drawable/whatsapp_image_2022_04_23_at_6_39_43_pm" />
+        app:layout_constraintVertical_bias="0.008"
+        tools:srcCompat="@drawable/whatsapp_image_2022_04_23_at_6_39_43_pm_removebg_preview" />
 
     <EditText
         android:id="@+id/txtNombreCrearCuenta"
@@ -64,37 +26,40 @@
         android:ems="10"
         android:hint="@string/nombre_crear_cuenta"
         android:inputType="textPersonName"
+        android:textColor="#646464"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.28" />
+        app:layout_constraintVertical_bias="0.233" />
 
     <EditText
-        android:id="@+id/txtCorreoCrearCuenta"
+        android:id="@+id/txtTelefonoCrearCuenta"
         android:layout_width="269dp"
         android:layout_height="49dp"
         android:ems="10"
-        android:hint="@string/correo_electronico_crear_cuenta"
-        android:inputType="textEmailAddress"
+        android:hint="@string/telefono_crear_cuenta"
+        android:inputType="phone"
+        android:textColor="#646464"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.629" />
+        app:layout_constraintVertical_bias="0.47" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/correo_electronico_crear_cuenta"
+        android:textColor="#646464"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.237"
+        app:layout_constraintHorizontal_bias="0.24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.575" />
+        app:layout_constraintVertical_bias="0.529" />
 
     <EditText
         android:id="@+id/txtContrasenaCrearCuenta"
@@ -103,23 +68,26 @@
         android:ems="10"
         android:hint="@string/contrasena_crear_cuenta"
         android:inputType="textPassword"
+        android:textColor="#646464"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.728" />
+        app:layout_constraintVertical_bias="0.695" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/contrasena_crear_cuenta"
+        android:textColor="#646464"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.206"
+        app:layout_constraintHorizontal_bias="0.209"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.671" />
+        app:layout_constraintVertical_bias="0.639" />
 
     <EditText
         android:id="@+id/txtRepetirContrasenaCrearCuenta"
@@ -128,36 +96,94 @@
         android:ems="10"
         android:hint="@string/repetir_contrasena_crear_cuenta"
         android:inputType="textPassword"
+        android:textColor="#646464"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.843" />
+        app:layout_constraintVertical_bias="0.815" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/repetir_contrasena_crear_cuenta"
+        android:textColor="#646464"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.245"
+        app:layout_constraintHorizontal_bias="0.249"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.78" />
+        app:layout_constraintVertical_bias="0.751" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nombre_crear_cuenta"
+        android:textColor="#646464"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.194"
+        app:layout_constraintHorizontal_bias="0.197"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.241" />
+        app:layout_constraintVertical_bias="0.195" />
+
+    <EditText
+        android:id="@+id/txtApellidoCrearCuenta"
+        android:layout_width="269dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:hint="@string/apellido_crear_cuenta"
+        android:inputType="textPersonName"
+        android:textColor="#646464"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.356" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/apellido_crear_cuenta"
+        android:textColor="#646464"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.191"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.313" />
+
+    <EditText
+        android:id="@+id/txtCorreoCrearCuenta"
+        android:layout_width="269dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:hint="@string/correo_electronico_crear_cuenta"
+        android:inputType="textEmailAddress"
+        android:textColor="#646464"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.582" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/telefono_crear_cuenta"
+        android:textColor="#646464"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.199"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.424" />
 
     <Button
         android:id="@+id/btnCrearCuenta"
@@ -168,12 +194,13 @@
         android:backgroundTint="#F4F4F4"
         android:backgroundTintMode="add"
         android:text="@string/btn_crear_cuenta"
+        android:textColor="#646464"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.918" />
+        app:layout_constraintVertical_bias="0.904" />
 
     <TextView
         android:id="@+id/txtIniciaSesion"
@@ -181,26 +208,12 @@
         android:layout_height="33dp"
         android:text="@string/txt_inicia_sesion_crear_cuenta"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="#646464"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.982" />
-
-    <EditText
-        android:id="@+id/txtTelefonoCrearCuenta"
-        android:layout_width="269dp"
-        android:layout_height="49dp"
-        android:ems="10"
-        android:hint="@string/telefono_crear_cuenta"
-        android:inputType="phone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.517" />
+        app:layout_constraintVertical_bias="0.968" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

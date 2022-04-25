@@ -1,6 +1,6 @@
 package sv.edu.udb.catedradsm.models;
 
-public class CrearCuentaModel {
+public class CuentaModel {
     private String id;
     private String nombre;
     private String apellido;
@@ -8,7 +8,11 @@ public class CrearCuentaModel {
     private String telefono;
     private String password;
 
-    public CrearCuentaModel(String id, String nombre, String apellido, String correo, String telefono, String password) {
+    public CuentaModel(String id) {
+        this.id = id;
+    }
+
+    public CuentaModel(String id, String nombre, String apellido, String correo, String telefono, String password) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -17,7 +21,7 @@ public class CrearCuentaModel {
         this.password = password;
     }
 
-    public CrearCuentaModel(String nombre, String apellido, String correo, String telefono, String password) {
+    public CuentaModel(String nombre, String apellido, String correo, String telefono, String password) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -26,6 +30,13 @@ public class CrearCuentaModel {
         this.password = password;
     }
 
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getNombre() {
         return nombre;

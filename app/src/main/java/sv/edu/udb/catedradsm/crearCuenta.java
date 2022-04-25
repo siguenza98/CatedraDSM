@@ -12,13 +12,12 @@ import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
-import sv.edu.udb.catedradsm.controllers.CrearCuentaController;
-import sv.edu.udb.catedradsm.models.CrearCuentaModel;
+import sv.edu.udb.catedradsm.controllers.CuentaController;
+import sv.edu.udb.catedradsm.models.CuentaModel;
 
 public class crearCuenta extends AppCompatActivity {
-    CrearCuentaController controller = new CrearCuentaController(crearCuenta.this);
+    CuentaController controller = new CuentaController(crearCuenta.this);
     private EditText txtNombreCrearCuenta;
     private EditText txtApellidoCrearCuenta;
     private EditText txtTelefonoCrearCuenta;
@@ -53,15 +52,15 @@ public class crearCuenta extends AppCompatActivity {
                 String correo = txtCorreoCrearCuenta.getText().toString();
                 String contrasena = txtContrasenaCrearCuenta.getText().toString();
                 System.out.println("invocando método del controller");
-                CrearCuentaModel crearCuenta = new CrearCuentaModel("Pamela","Velasquez","pamela.velasquez@gmail.com","77777777","12345");
+                CuentaModel crearCuenta = new CuentaModel("Carlos","Huerta","carlos.huerta@gmail.com","74587458","12345");
 
                 guardar(crearCuenta);
             }
         });
     }
 
-    public void guardar(CrearCuentaModel crearCuenta){
-        controller.realizarPeticion(crearCuenta, new CrearCuentaController.VolleyResponseListener() {
+    public void guardar(CuentaModel crearCuenta){
+        controller.realizarPeticion(crearCuenta, new CuentaController.VolleyResponseListener() {
             @Override
             public void onError(String mensaje) {
                 Toast.makeText(crearCuenta.this, mensaje, Toast.LENGTH_SHORT).show();

@@ -14,4 +14,5 @@
 <!--    CONFIGURACION DE CUENTA-->
     <string name="btn_cerrar_sesion_configuracion_de_cuenta">Cerrar sesión</string>
     <string name="btn_guardar_datos_configuracion_de_cuenta">Guardar datos</string>
+    <string name="btn_volver_a_inicio_configuracion_de_cuenta">Volver a inicio</string>
 </resources>
