@@ -11,6 +11,11 @@ public class CitasModel {
     private String fecha;
     private String hora;
     private double costo;
+    private String sucursal;
+    private String estilista;
+
+    public CitasModel() {
+    }
 
     public CitasModel(int id) {
         this.id = id;
@@ -99,6 +104,22 @@ public class CitasModel {
 
     public void setCosto(double costo) {
         this.costo = costo;
+    }
+
+    public String getSucursal() {
+        return sucursal;
+    }
+
+    public void setSucursal(String sucursal) {
+        this.sucursal = sucursal;
+    }
+
+    public String getEstilista() {
+        return estilista;
+    }
+
+    public void setEstilista(String estilista) {
+        this.estilista = estilista;
     }
 
     @Override
