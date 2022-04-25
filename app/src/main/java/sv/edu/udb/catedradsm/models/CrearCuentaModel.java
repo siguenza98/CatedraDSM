@@ -6,24 +6,24 @@ public class CrearCuentaModel {
     private String apellido;
     private String correo;
     private String telefono;
-    private String contrasena;
+    private String password;
 
-    public CrearCuentaModel(String id, String nombre, String apellido, String correo, String telefono, String contrasena) {
+    public CrearCuentaModel(String id, String nombre, String apellido, String correo, String telefono, String password) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
         this.telefono = telefono;
-        this.contrasena = contrasena;
+        this.password = password;
     }
 
-    public CrearCuentaModel(String nombre, String apellido, String correo, String telefono, String contrasena) {
+    public CrearCuentaModel(String nombre, String apellido, String correo, String telefono, String password) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
         this.telefono = telefono;
-        this.contrasena = contrasena;
+        this.password = password;
     }
 
 
@@ -59,23 +59,22 @@ public class CrearCuentaModel {
         this.telefono = telefono;
     }
 
-    public String getContrasena() {
-        return contrasena;
+    public String getPassword() {
+        return password;
     }
 
-    public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
+    public void setPassword(String contrasena) {
+        this.password = password;
     }
 
     @Override
     public String toString() {
         return "CrearCuentaModel{" +
-                "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
                 ", correo='" + correo + '\'' +
                 ", telefono='" + telefono + '\'' +
-                ", contrasena='" + contrasena + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 }

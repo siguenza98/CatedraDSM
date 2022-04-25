@@ -20,7 +20,7 @@ import sv.edu.udb.catedradsm.models.CrearCuentaModel;
 import sv.edu.udb.catedradsm.models.ConexionModel;
 
 public class CrearCuentaController {
-    String url = "https://udbdsmapi.000webhostapp.com/api/user/create";
+    String url = "https://udbdsmapi.000webhostapp.com/api/user";
     Context context;
     String respuesta = "";
 
@@ -41,21 +41,22 @@ public class CrearCuentaController {
             datos.put("apellido",crearCuenta.getApellido());
             datos.put("correo",crearCuenta.getCorreo());
             datos.put("telefono",crearCuenta.getTelefono());
-            datos.put("password",crearCuenta.getContrasena());
+            datos.put("password",crearCuenta.getPassword());
 
-            JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, datos,new Response.Listener<JSONObject>() {
+            JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, datos, new Response.Listener<JSONObject>() {
                 @Override
                 public void onResponse(JSONObject response) {
                     try{
                         volleyResponseListener.onResponse(response);
-                    }catch(Exception e){
-                        Toast.makeText(context, "Hubo un error al realizar la petición", Toast.LENGTH_SHORT).show();
+                    }catch(Exception error){
+                        error.printStackTrace();
+                        Toast.makeText(context, "Hubo un error al realizar la petición.", Toast.LENGTH_SHORT).show();
                     }
                 }
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    volleyResponseListener.onError("Hubo un error al realizar la petición.");
+                    volleyResponseListener.onError("se arruinó el programa");
                 }
 
             });
