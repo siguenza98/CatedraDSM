@@ -12,6 +12,10 @@ public class CitasModel {
     private String hora;
     private double costo;
 
+    public CitasModel(int id) {
+        this.id = id;
+    }
+
     public CitasModel(int id, int idCliente, int idEstilista, int idSucursal, String motivo, String fecha, String hora, double costo) {
         this.id = id;
         this.idCliente = idCliente;

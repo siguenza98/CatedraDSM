@@ -57,7 +57,7 @@ public class AgendarCita extends AppCompatActivity {
     }
 
     public void guardar(CitasModel citas){
-        controller.realizarPeticion(citas, new CitasController.VolleyResponseListener() {
+        controller.agendarCita(citas, new CitasController.VolleyResponseListener() {
             @Override
             public void onError(String mensaje) {
                 Toast.makeText(AgendarCita.this, mensaje, Toast.LENGTH_SHORT).show();
@@ -71,7 +71,8 @@ public class AgendarCita extends AppCompatActivity {
                     String code = obj.getString("code");
 
                     if(mensaje.equals("OK")){
-                        System.out.println("EXITO");
+                        Toast.makeText(AgendarCita.this, "Cita agendada con éxito", Toast.LENGTH_SHORT).show();
+                        //redirigir hacia activity principal
                     }else{
                         System.out.println("ERROR");
                     }

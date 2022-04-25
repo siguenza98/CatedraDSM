@@ -1,9 +1,13 @@
 <resources>
     <string name="app_name">CatedraDSM</string>
     <string name="cita_titulo">Agendar una Cita</string>
+    <string name="cita_ver_titulo">Ver una Cita</string>
     <string name="cita_paciente">Nombre Completo</string>
     <string name="cita_sucursal">Sucursal</string>
     <string name="cita_estilista">Seleccione un estilista</string>
     <string name="cita_fecha">Fecha de la cita</string>
     <string name="cita_hora">Hora de la cita</string>
+    <string name="boton_guardar">Guardar</string>
+    <string name="boton_cancelar">Cancelar</string>
+    <string name="boton_volver">Volver</string>
 </resources>

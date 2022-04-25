@@ -11,13 +11,12 @@
     android:background="#FFCDD2">
 
 
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:layout_gravity="center"
-        tools:srcCompat="@drawable/dd193b18_789a_4a81_8690_7ede6f2f7dbe_removebg_preview__1_" />
+        tools:srcCompat="@drawable/tijera" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -93,7 +92,7 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
 
-        android:text="Guardar"
+        android:text="@string/boton_guardar"
         android:textColor="#646464" />
 
     <Button
@@ -101,7 +100,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
-        android:text="Cancelar"
+        android:text="@string/boton_cancelar"
         android:textColor="#646464" />
 
 </LinearLayout>
