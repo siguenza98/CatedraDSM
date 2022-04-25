@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -17,7 +16,7 @@ import sv.edu.udb.catedradsm.models.CitasModel;
 
 public class VerCita extends AppCompatActivity {
     CitasController controller = new CitasController(VerCita.this);
-    private EditText edtNombre;
+    private EditText edtMotivo;
     private EditText edtSucursal;
     private EditText edtEstilista;
     private EditText edtFecha;
@@ -31,7 +30,7 @@ public class VerCita extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_cita);
 
-        edtNombre = (EditText) findViewById(R.id.edtNombre);
+        edtMotivo = (EditText) findViewById(R.id.edtMotivo);
         edtSucursal = (EditText) findViewById(R.id.edtSucursal);
         edtEstilista = (EditText) findViewById(R.id.edtEstilista);
         edtFecha = (EditText) findViewById(R.id.edtFecha);
@@ -67,7 +66,7 @@ public class VerCita extends AppCompatActivity {
                         String hora = obj.getString("hora");
                         String costototal = obj.getString("costototal");
 
-                        edtNombre.setText(motivo);
+                        edtMotivo.setText(motivo);
                         edtEstilista.setText(idestilista);
                         edtSucursal.setText(idsucursal);
                         edtFecha.setText(fecha);
@@ -77,18 +76,6 @@ public class VerCita extends AppCompatActivity {
                     }else{
                         Toast.makeText(VerCita.this, "Hubo un error al realizar la petición", Toast.LENGTH_SHORT).show();
                     }
-
-                    /*String mensaje = obj.getString("respuesta");
-                    String code = obj.getString("code");
-
-                    if(mensaje.equals("OK")){
-                        Toast.makeText(VerCita.this, "Cita agendada con éxito", Toast.LENGTH_SHORT).show();
-                        //System.out.println(obj.toString());
-                        //redirigir hacia activity principal
-                    }else{
-                        System.out.println("ERROR");
-                    }*/
-
                 }catch(JSONException e){
                     e.printStackTrace();
                 }

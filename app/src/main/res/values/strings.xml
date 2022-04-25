@@ -4,6 +4,7 @@
     <string name="cita_ver_titulo">Ver una Cita</string>
     <string name="cita_paciente">Nombre Completo</string>
     <string name="cita_sucursal">Sucursal</string>
+    <string name="cita_motivo">Motivo</string>
     <string name="cita_estilista">Seleccione un estilista</string>
     <string name="cita_fecha">Fecha de la cita</string>
     <string name="cita_hora">Hora de la cita</string>

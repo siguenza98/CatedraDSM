@@ -17,7 +17,7 @@ import sv.edu.udb.catedradsm.models.CitasModel;
 
 public class AgendarCita extends AppCompatActivity {
     CitasController controller = new CitasController(AgendarCita.this);
-    private EditText edtNombre;
+    private EditText edtMotivo;
     private EditText edtSucursal;
     private EditText edtEstilista;
     private EditText edtFecha;
@@ -31,7 +31,7 @@ public class AgendarCita extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agendar_cita);
 
-        edtNombre = (EditText) findViewById(R.id.edtNombre);
+        edtMotivo = (EditText) findViewById(R.id.edtMotivo);
         edtSucursal = (EditText) findViewById(R.id.edtSucursal);
         edtEstilista = (EditText) findViewById(R.id.edtEstilista);
         edtFecha = (EditText) findViewById(R.id.edtFecha);
@@ -43,13 +43,13 @@ public class AgendarCita extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 System.out.println("Metodo click");
-                String nombre = edtNombre.getText().toString();
-                String sucursal = edtNombre.getText().toString();
-                String estilista = edtNombre.getText().toString();
-                String fecha = edtNombre.getText().toString();
-                String hora = edtNombre.getText().toString();
+                String motivo = edtMotivo.getText().toString();
+                String sucursal = edtMotivo.getText().toString();
+                String estilista = edtMotivo.getText().toString();
+                String fecha = edtMotivo.getText().toString();
+                String hora = edtMotivo.getText().toString();
                 System.out.println("invocando método del controller");
-                CitasModel cita = new CitasModel(1,1,1,"prueba","2022-05-10","3:30 pm",0.00);
+                CitasModel cita = new CitasModel(1,Integer.parseInt(estilista),Integer.parseInt(sucursal),motivo,fecha,hora,10.00);
 
                 guardar(cita);
             }
