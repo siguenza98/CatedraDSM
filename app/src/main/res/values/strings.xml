@@ -2,7 +2,9 @@
     <string name="app_name">CatedraDSM</string>
 
 <!--    CREAR CUENTA-->
-    <string name="nombre_completo_crear_cuenta">Nombre completo</string>
+    <string name="nombre_crear_cuenta">Nombre</string>
+    <string name="apellido_crear_cuenta">Apellido</string>
+    <string name="telefono_crear_cuenta">Teléfono</string>
     <string name="correo_electronico_crear_cuenta">Correo electrónico</string>
     <string name="contrasena_crear_cuenta">Contraseña</string>
     <string name="repetir_contrasena_crear_cuenta">Repetir contraseña</string>
