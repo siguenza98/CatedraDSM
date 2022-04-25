@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">CatedraDSM</string>
+    <string name="inicio_agendar_cita">Agendar Cita</string>
+    <string name="inicio_ver_vita">Ver Citas</string>
+    <string name="btn_agendar_cita">Agendar Citas</string>
+    <string name="btn_ver_cita">Ver Cita</string>
+    <string name="btn_configurar_cuenta">Configurar Cuenta</string>
+    <string name="btn_cerrar_sesion">Cerrar Sesion</string>
 </resources>
