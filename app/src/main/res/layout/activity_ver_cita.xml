@@ -12,15 +12,16 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
         android:layout_gravity="center"
-        tools:srcCompat="@drawable/dd193b18_789a_4a81_8690_7ede6f2f7dbe_removebg_preview__1_" />
+        tools:srcCompat="@drawable/tijera" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="@string/cita_titulo"
+        android:text="@string/cita_ver_titulo"
         android:textColor="#646464"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -126,13 +127,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:text="Guardar"
-        android:textColor="#646464" />
-    <Button
-        android:text="Cancelar"
+        android:text="@string/boton_volver"
         android:backgroundTint="@color/white"
         android:textColor="#646464"
         android:layout_width="match_parent"
