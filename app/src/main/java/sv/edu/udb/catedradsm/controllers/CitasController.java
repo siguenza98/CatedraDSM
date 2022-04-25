@@ -8,17 +8,19 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import sv.edu.udb.catedradsm.models.CitasModel;
+
 import sv.edu.udb.catedradsm.models.ConexionModel;
 
 public class CitasController {
-    //String url = "https://udbdsmapi.000webhostapp.com/api/user";
-    String url = "";
+    String url = "https://udbdsmapi.000webhostapp.com/api/cita/create";
     Context context;
     String respuesta = "";
 
@@ -31,24 +33,40 @@ public class CitasController {
         void onResponse(Object respuesta);
     }
 
-    public void realizarPeticion(VolleyResponseListener volleyResponseListener){
+    public void realizarPeticion(CitasModel cita, VolleyResponseListener volleyResponseListener){
+        JSONObject datos = new JSONObject();
 
-        JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null,new Response.Listener<JSONArray>() {
-            @Override
-            public void onResponse(JSONArray response) {
-                try{
-                    volleyResponseListener.onResponse(response);
-                }catch(Exception e){
-                    Toast.makeText(context, "Hubo un error al realizar la petición", Toast.LENGTH_SHORT).show();
+        try{
+            datos.put("idcliente",cita.getIdCliente());
+            datos.put("idestilista",cita.getIdEstilista());
+            datos.put("idsucursal",cita.getIdSucursal());
+            datos.put("motivo",cita.getMotivo());
+            datos.put("fecha",cita.getFecha());
+            datos.put("hora",cita.getHora());
+            datos.put("costototal",cita.getCosto());
+
+            JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, datos,new Response.Listener<JSONObject>() {
+                @Override
+                public void onResponse(JSONObject response) {
+                    try{
+                        volleyResponseListener.onResponse(response);
+                    }catch(Exception e){
+                        Toast.makeText(context, "Hubo un error al realizar la petición", Toast.LENGTH_SHORT).show();
+                    }
                 }
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                volleyResponseListener.onError("Hubo un error al realizar la petición.");
-            }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    volleyResponseListener.onError("Hubo un error al realizar la petición.");
+                }
 
-        });
-        ConexionModel.getInstance(context).addToRequestQueue(request);
+            });
+            ConexionModel.getInstance(context).addToRequestQueue(request);
+        }catch(JSONException e){
+            e.printStackTrace();
+        }
+
+
+
     }
 }
