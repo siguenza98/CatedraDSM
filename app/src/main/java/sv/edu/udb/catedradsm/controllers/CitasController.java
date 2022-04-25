@@ -81,6 +81,41 @@ public class CitasController {
                     try{
                         volleyResponseListener.onResponse(response);
                     }catch(Exception e){
+                        System.out.println("catch del response controlador");
+                        Toast.makeText(context, "Hubo un error al realizar la petición", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    System.out.println("metodo errorresponse controlador");
+                    System.out.println("error: "+error.toString());
+                    volleyResponseListener.onError("Hubo un error al realizar la petición.");
+                }
+
+            });
+            ConexionModel.getInstance(context).addToRequestQueue(request);
+        }catch(JSONException e){
+            e.printStackTrace();
+        }
+
+
+
+    }
+
+    public void historialCitas(CitasModel cita, VolleyResponseListener volleyResponseListener){
+        url = "https://udbdsmapi.000webhostapp.com/api/cita/getCitasByUserId";
+
+        JSONObject datos = new JSONObject();
+        try{
+
+            datos.put("userId",cita.getIdCliente());
+            JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, datos,new Response.Listener<JSONObject>() {
+                @Override
+                public void onResponse(JSONObject response) {
+                    try{
+                        volleyResponseListener.onResponse(response);
+                    }catch(Exception e){
                         Toast.makeText(context, "Hubo un error al realizar la petición", Toast.LENGTH_SHORT).show();
                     }
                 }

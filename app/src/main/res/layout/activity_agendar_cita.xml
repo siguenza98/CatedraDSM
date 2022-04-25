@@ -16,7 +16,7 @@
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:layout_gravity="center"
-        tools:srcCompat="@drawable/tijera" />
+        android:src="@drawable/tijera" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

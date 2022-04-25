@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:background="#FFCDD2"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvId"
+        android:visibility="gone"
+        android:layout_margin="5dp"
+        android:textSize="18sp"
+        android:textColor="#646464"
+        android:layout_width="match_parent"
+        android:background="#FFCDD2"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvMotivo"
+        android:layout_margin="5dp"
+        android:textSize="18sp"
+        android:textColor="#646464"
+        android:layout_width="match_parent"
+        android:background="#FFCDD2"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvSucursal"
+        android:layout_margin="5dp"
+        android:textSize="18sp"
+        android:textColor="#646464"
+        android:layout_width="match_parent"
+        android:background="#FFCDD2"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvEstilista"
+        android:layout_margin="5dp"
+        android:textSize="18sp"
+        android:textColor="#646464"
+        android:layout_width="match_parent"
+        android:background="#FFCDD2"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvFecha"
+        android:layout_margin="5dp"
+        android:textSize="18sp"
+        android:textColor="#646464"
+        android:layout_width="match_parent"
+        android:background="#FFCDD2"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvHora"
+        android:layout_margin="5dp"
+        android:textSize="18sp"
+        android:textColor="#646464"
+        android:layout_width="match_parent"
+        android:background="#FFCDD2"
+        android:layout_height="wrap_content"/>
+
+    <View style="@style/Divider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
