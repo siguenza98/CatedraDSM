@@ -24,12 +24,17 @@ public class AgendarCita extends AppCompatActivity {
     private EditText edtHora;
     private Button btnAgregar;
     private Button btnCancelar;
+    private String userId = "";
     SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agendar_cita);
+
+        // Obtención de datos que envia actividad anterior
+        Bundle datos = getIntent().getExtras();
+        userId = datos.getString("userId");
 
         edtMotivo = (EditText) findViewById(R.id.edtMotivo);
         edtSucursal = (EditText) findViewById(R.id.edtSucursal);
@@ -44,14 +49,23 @@ public class AgendarCita extends AppCompatActivity {
             public void onClick(View v){
                 System.out.println("Metodo click");
                 String motivo = edtMotivo.getText().toString();
-                String sucursal = edtMotivo.getText().toString();
-                String estilista = edtMotivo.getText().toString();
-                String fecha = edtMotivo.getText().toString();
-                String hora = edtMotivo.getText().toString();
+                String sucursal = edtSucursal.getText().toString();
+                String estilista = edtEstilista.getText().toString();
+                String fecha = edtFecha.getText().toString();
+                String hora = edtHora.getText().toString();
                 System.out.println("invocando método del controller");
-                CitasModel cita = new CitasModel(1,Integer.parseInt(estilista),Integer.parseInt(sucursal),motivo,fecha,hora,10.00);
+                CitasModel cita = new CitasModel(Integer.parseInt(userId),Integer.parseInt(estilista),Integer.parseInt(sucursal),motivo,fecha,hora,10.00);
 
                 guardar(cita);
+
+                finish();
+            }
+        });
+
+        btnCancelar.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                finish();
             }
         });
     }

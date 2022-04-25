@@ -15,7 +15,7 @@
         android:layout_width="115dp"
         android:layout_height="115dp"
         android:layout_gravity="center"
-        tools:srcCompat="@drawable/tijera" />
+        android:src="@drawable/tijera"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -134,9 +134,10 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:text="@string/boton_volver"
-        android:backgroundTint="@color/white"
-        android:textColor="#646464"
+        android:id="@+id/btnVolver"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:text="@string/boton_volver"
+        android:textColor="#646464" />
 </LinearLayout>
