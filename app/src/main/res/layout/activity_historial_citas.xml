@@ -19,7 +19,7 @@
         app:fabSize="normal"
         android:background="#FFCDD2"/>
     <ListView
-        android:id="@+id/ListaExamenes"
+        android:id="@+id/listadoCitas"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="3dp"

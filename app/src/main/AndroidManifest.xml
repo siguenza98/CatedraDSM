@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CatedraDSM">
         <activity
+            android:name=".HistorialCitas"
+            android:exported="false" />
+        <activity
+            android:name=".CitaLayout"
+            android:exported="false" />
+        <activity
+            android:name=".Splash"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

@@ -8,11 +8,16 @@ public class CitasModel {
     private int idEstilista;
     private int idSucursal;
     private String motivo;
-    private Date fecha;
+    private String fecha;
     private String hora;
     private double costo;
+    private String sucursal;
+    private String estilista;
 
-    public CitasModel(int id, int idCliente, int idEstilista, int idSucursal, String motivo, Date fecha, String hora, double costo) {
+    public CitasModel() {
+    }
+
+    public CitasModel(int id, int idCliente, int idEstilista, int idSucursal, String motivo, String fecha, String hora, double costo) {
         this.id = id;
         this.idCliente = idCliente;
         this.idEstilista = idEstilista;
@@ -23,7 +28,7 @@ public class CitasModel {
         this.costo = costo;
     }
 
-    public CitasModel(int idCliente, int idEstilista, int idSucursal, String motivo, Date fecha, String hora, double costo) {
+    public CitasModel(int idCliente, int idEstilista, int idSucursal, String motivo, String fecha, String hora, double costo) {
         this.idCliente = idCliente;
         this.idEstilista = idEstilista;
         this.idSucursal = idSucursal;
@@ -73,11 +78,11 @@ public class CitasModel {
         this.motivo = motivo;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
@@ -95,6 +100,22 @@ public class CitasModel {
 
     public void setCosto(double costo) {
         this.costo = costo;
+    }
+
+    public String getSucursal() {
+        return sucursal;
+    }
+
+    public void setSucursal(String sucursal) {
+        this.sucursal = sucursal;
+    }
+
+    public String getEstilista() {
+        return estilista;
+    }
+
+    public void setEstilista(String estilista) {
+        this.estilista = estilista;
     }
 
     @Override

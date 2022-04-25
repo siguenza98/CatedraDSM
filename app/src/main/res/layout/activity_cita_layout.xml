@@ -7,7 +7,7 @@
 
 
     <TextView
-        android:id="@+id/tvNombre"
+        android:id="@+id/tvMotivo"
         android:layout_margin="5dp"
         android:textSize="18sp"
         android:textColor="#646464"
