@@ -8,7 +8,7 @@ Ciclo I 2022
 Integrantes:
  - Fernando José Sigüenza Rodríguez SR161939
  - Marvin Wilfredo Tobar Beltrán TB181979
- - José Alfredo Aguilar Lara AL170536
+ - José Alfredo Aguilar Lara AL170536.
  - Daniel Edgardo Flores Montiagudo FM150663
  - Xenia Guadalupe Flores Rivas FR180414
 
