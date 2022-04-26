@@ -11,6 +11,33 @@
         android:theme="@style/Theme.CatedraDSM">
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".crearCuenta"
+            android:exported="false" />
+        <activity
+            android:name=".vista_inicio"
+            android:exported="false" />
+        <activity
+            android:name=".VerCita"
+            android:exported="false" />
+        <activity
+            android:name=".AgendarCita"
+            android:exported="false" />
+        <activity
+            android:name=".HistorialCitas"
+            android:exported="false" />
+        <activity
+            android:name=".CitaLayout"
+            android:exported="false" />
+        <activity
+            android:name=".configuracionDeCuenta"
+            android:exported="false" />
+        <activity
+            android:name=".Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,6 +46,7 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
 </manifest>
