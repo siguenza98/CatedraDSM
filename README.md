@@ -12,7 +12,6 @@ Integrantes:
  - Daniel Edgardo Flores Montiagudo FM150663
  - Xenia Guadalupe Flores Rivas FR180414
 
- 
 
 ## Enlaces
 - [Trello](https://trello.com/dsm241/home)
