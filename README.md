@@ -1,4 +1,4 @@
-# <p align="center">Sonrie App</p>
+# <p align="center">Snips!</p>
 
 Proyecto de catedra para la materia Desarrollo de Software para Móviles DSM104 G02T
 
@@ -18,6 +18,7 @@ Integrantes:
 - [Trello](https://trello.com/dsm241/home)
 - [Mockups](https://www.figma.com/file/2JHRuQyh5bdsmi4vlRwlyw/Mockups-DSM?node-id=0%3A1)
 - [Primer Avance](https://docs.google.com/document/d/1NGdJBZ9wQUr0wAibRnJvfcP59XcWn2vONO8JAR1aro4/edit)
+- [Video Segundo Avance](https://www.youtube.com/watch?v=9KfmC5RYGMc)
 
 ## Licencia
 Licencia Creative Commons, ver archivo LICENSE
