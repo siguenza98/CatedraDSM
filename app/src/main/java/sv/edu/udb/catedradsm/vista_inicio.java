@@ -18,7 +18,10 @@ public class vista_inicio extends AppCompatActivity {
     SharedPreferences sharedpreferences;
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/Daniel
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +62,10 @@ public class vista_inicio extends AppCompatActivity {
                 startActivity(i);
             }
         });
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/Daniel
         sharedpreferences = getSharedPreferences("usuario", 0);
 
         btnCerrarSesion.setOnClickListener(new View.OnClickListener(){

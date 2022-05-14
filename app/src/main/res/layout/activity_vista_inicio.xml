@@ -26,9 +26,15 @@
                 android:id="@+id/textViewNombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+<<<<<<< HEAD
                 android:textAlignment="center"
                 android:textSize="30sp"
                 android:text="hola usuario"/>
+=======
+                android:text="@string/inicio_saludo"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+>>>>>>> origin/Daniel
 
             <ImageView
                 android:layout_width="match_parent"
