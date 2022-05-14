@@ -19,7 +19,11 @@
         android:src="@drawable/tijera" />
     <TextView
         android:layout_width="match_parent"
+<<<<<<< HEAD
         android:layout_height="30dp"
+=======
+        android:layout_height="wrap_content"
+>>>>>>> 96e67c62cf57c9a853910334d79c416ae3a80264
         android:gravity="center_horizontal"
         android:text="@string/cita_titulo"
         android:textColor="#646464"
@@ -39,6 +43,7 @@
             android:textColorHint="#646464"
             android:hint="@string/cita_sucursal"
             android:layout_width="match_parent"
+<<<<<<< HEAD
             android:layout_height="wrap_content"
             android:visibility="gone"/>
 
@@ -81,6 +86,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
+=======
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+>>>>>>> 96e67c62cf57c9a853910334d79c416ae3a80264
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -92,8 +102,12 @@
             android:textColorHint="#646464"
             android:hint="@string/cita_estilista"
             android:layout_width="match_parent"
+<<<<<<< HEAD
             android:layout_height="10dp"
             android:visibility="gone"/>
+=======
+            android:layout_height="wrap_content"/>
+>>>>>>> 96e67c62cf57c9a853910334d79c416ae3a80264
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -107,6 +121,7 @@
             android:textColorHint="#646464"
             android:hint="@string/cita_motivo"
             android:layout_width="match_parent"
+<<<<<<< HEAD
             android:layout_height="10dp"
             android:visibility="gone"/>
 
@@ -127,6 +142,9 @@
             android:layout_height="20dp"
             android:dropDownHeight="60dp"
             android:spinnerMode="dropdown"/>
+=======
+            android:layout_height="wrap_content"/>
+>>>>>>> 96e67c62cf57c9a853910334d79c416ae3a80264
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout

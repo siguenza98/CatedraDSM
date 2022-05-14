@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+<<<<<<< HEAD
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -41,12 +42,32 @@ public class AgendarCita extends AppCompatActivity {
     private Spinner spSucursal;
     private EditText edtEstilista;
     private Spinner spEstilista;
+=======
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import sv.edu.udb.catedradsm.controllers.CitasController;
+import sv.edu.udb.catedradsm.models.CitasModel;
+
+public class AgendarCita extends AppCompatActivity {
+    CitasController controller = new CitasController(AgendarCita.this);
+    private EditText edtMotivo;
+    private EditText edtSucursal;
+    private EditText edtEstilista;
+>>>>>>> 96e67c62cf57c9a853910334d79c416ae3a80264
     private EditText edtFecha;
     private EditText edtHora;
     private Button btnAgregar;
     private Button btnCancelar;
     private String userId = "";
+<<<<<<< HEAD
     private double precio;
+=======
+>>>>>>> 96e67c62cf57c9a853910334d79c416ae3a80264
     SharedPreferences sharedPreferences;
 
     @Override
@@ -59,16 +80,22 @@ public class AgendarCita extends AppCompatActivity {
         userId = datos.getString("userId");
 
         edtMotivo = (EditText) findViewById(R.id.edtMotivo);
+<<<<<<< HEAD
         spMotivo = (Spinner) findViewById(R.id.spMotivo);
         edtSucursal = (EditText) findViewById(R.id.edtSucursal);
         spSucursal = (Spinner) findViewById(R.id.spSucursal);
         edtEstilista = (EditText) findViewById(R.id.edtEstilista);
         spEstilista = (Spinner) findViewById(R.id.spEstilista);
+=======
+        edtSucursal = (EditText) findViewById(R.id.edtSucursal);
+        edtEstilista = (EditText) findViewById(R.id.edtEstilista);
+>>>>>>> 96e67c62cf57c9a853910334d79c416ae3a80264
         edtFecha = (EditText) findViewById(R.id.edtFecha);
         edtHora = (EditText) findViewById(R.id.edtHora);
         btnAgregar = (Button) findViewById(R.id.btnAgregar);
         btnCancelar = (Button) findViewById(R.id.btnCancelar);
 
+<<<<<<< HEAD
         cargarDatosSucursales(new SucursalModel());
         cargarDatosServicios();
 
@@ -118,12 +145,24 @@ public class AgendarCita extends AppCompatActivity {
         btnAgregar.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
+=======
+        btnAgregar.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                System.out.println("Metodo click");
+>>>>>>> 96e67c62cf57c9a853910334d79c416ae3a80264
                 String motivo = edtMotivo.getText().toString();
                 String sucursal = edtSucursal.getText().toString();
                 String estilista = edtEstilista.getText().toString();
                 String fecha = edtFecha.getText().toString();
                 String hora = edtHora.getText().toString();
+<<<<<<< HEAD
                 CitasModel cita = new CitasModel(Integer.parseInt(userId),Integer.parseInt(estilista),Integer.parseInt(sucursal),motivo,fecha,hora,precio);
+=======
+                System.out.println("invocando método del controller");
+                CitasModel cita = new CitasModel(Integer.parseInt(userId),Integer.parseInt(estilista),Integer.parseInt(sucursal),motivo,fecha,hora,10.00);
+
+>>>>>>> 96e67c62cf57c9a853910334d79c416ae3a80264
                 guardar(cita);
 
                 finish();
@@ -165,6 +204,7 @@ public class AgendarCita extends AppCompatActivity {
             }
         });
     }
+<<<<<<< HEAD
 
     public void cargarDatosSucursales(SucursalModel sucursal){
         sucursalController.obtenerSucursales(sucursal, new SucursalController.VolleyResponseListener() {
@@ -315,4 +355,6 @@ public class AgendarCita extends AppCompatActivity {
 
         spMotivo.setAdapter(adapter);
     }
+=======
+>>>>>>> 96e67c62cf57c9a853910334d79c416ae3a80264
 }

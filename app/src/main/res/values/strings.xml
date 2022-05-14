@@ -33,9 +33,13 @@
     <string name="btn_volver_a_inicio_configuracion_de_cuenta">Volver a inicio</string>
     <!-- VENTANA INICIO -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <string name="inicio_saludo">Snips!</string>
 >>>>>>> origin/Daniel
+=======
+    <string name="inicio_saludo">Snips!</string>
+>>>>>>> 96e67c62cf57c9a853910334d79c416ae3a80264
     <string name="inicio_agendar_cita">Agendar Cita</string>
     <string name="inicio_ver_vita">Ver Citas</string>
     <string name="btn_agendar_cita">Agendar Citas</string>

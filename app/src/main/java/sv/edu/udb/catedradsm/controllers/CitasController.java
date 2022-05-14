@@ -46,16 +46,20 @@ public class CitasController {
             datos.put("hora",cita.getHora());
             datos.put("costototal",cita.getCosto());
 <<<<<<< HEAD
+<<<<<<< HEAD
             datos.put("estado",1);
 
             System.out.println("metodo agendar desde el controller");
 =======
 >>>>>>> origin/Daniel
+=======
+>>>>>>> 96e67c62cf57c9a853910334d79c416ae3a80264
 
             JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, datos,new Response.Listener<JSONObject>() {
                 @Override
                 public void onResponse(JSONObject response) {
                     try{
+<<<<<<< HEAD
 <<<<<<< HEAD
                         System.out.println("exito: "+response);
                         volleyResponseListener.onResponse(response);
@@ -65,6 +69,10 @@ public class CitasController {
                         volleyResponseListener.onResponse(response);
                     }catch(Exception e){
 >>>>>>> origin/Daniel
+=======
+                        volleyResponseListener.onResponse(response);
+                    }catch(Exception e){
+>>>>>>> 96e67c62cf57c9a853910334d79c416ae3a80264
                         Toast.makeText(context, "Hubo un error al realizar la petición", Toast.LENGTH_SHORT).show();
                     }
                 }
@@ -72,9 +80,12 @@ public class CitasController {
                 @Override
                 public void onErrorResponse(VolleyError error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                     System.out.println("responseerror: "+error.toString());
 =======
 >>>>>>> origin/Daniel
+=======
+>>>>>>> 96e67c62cf57c9a853910334d79c416ae3a80264
                     volleyResponseListener.onError("Hubo un error al realizar la petición.");
                 }
 

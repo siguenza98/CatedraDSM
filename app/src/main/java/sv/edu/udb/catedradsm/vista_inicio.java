@@ -19,9 +19,12 @@ public class vista_inicio extends AppCompatActivity {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/Daniel
+=======
+>>>>>>> 96e67c62cf57c9a853910334d79c416ae3a80264
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,9 +66,12 @@ public class vista_inicio extends AppCompatActivity {
             }
         });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/Daniel
+=======
+>>>>>>> 96e67c62cf57c9a853910334d79c416ae3a80264
         sharedpreferences = getSharedPreferences("usuario", 0);
 
         btnCerrarSesion.setOnClickListener(new View.OnClickListener(){

@@ -77,10 +77,14 @@ public class Login extends AppCompatActivity {
 
         if(correo != null){
 <<<<<<< HEAD
+<<<<<<< HEAD
             Toast.makeText(Login.this, "logueado", Toast.LENGTH_SHORT).show();
 =======
             Toast.makeText(Login.this, "Ha iniciado sesión.", Toast.LENGTH_SHORT).show();
 >>>>>>> origin/Daniel
+=======
+            Toast.makeText(Login.this, "Ha iniciado sesión.", Toast.LENGTH_SHORT).show();
+>>>>>>> 96e67c62cf57c9a853910334d79c416ae3a80264
             //REDIRECCIONAR A VISTA PRINCIPAL
             Intent i = new Intent(getBaseContext(), vista_inicio.class);
             i.putExtra("userId",userId);

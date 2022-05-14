@@ -27,6 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 <<<<<<< HEAD
+<<<<<<< HEAD
                 android:textAlignment="center"
                 android:textSize="30sp"
                 android:text="hola usuario"/>
@@ -35,6 +36,11 @@
                 android:textAlignment="center"
                 android:textSize="30sp" />
 >>>>>>> origin/Daniel
+=======
+                android:text="@string/inicio_saludo"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+>>>>>>> 96e67c62cf57c9a853910334d79c416ae3a80264
 
             <ImageView
                 android:layout_width="match_parent"
