@@ -3,6 +3,7 @@ package sv.edu.udb.catedradsm;
 import androidx.appcompat.app.AppCompatActivity;
 
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -27,6 +28,11 @@ public class configuracionDeCuenta extends AppCompatActivity {
     private Button btnGuardarConfiguracion;
     private Button btnVolverAInicio;
     String userId = "";
+    String userNombre = "";
+    String userApellido = "";
+    String userTelefono = "";
+    String userCorreo = "";
+    String userPassword = "";
     SharedPreferences sharedPreferences;
 
     @Override
@@ -48,6 +54,8 @@ public class configuracionDeCuenta extends AppCompatActivity {
         userId = datos.getString("userId");
 
         CuentaModel cuenta = new CuentaModel(userId);
+
+
         System.out.println("invocando método del controller ver cita");
 
         cargarDatos(cuenta);
@@ -56,7 +64,8 @@ public class configuracionDeCuenta extends AppCompatActivity {
         btnGuardarConfiguracion.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-
+                CuentaModel cuentaA = new CuentaModel(userId,userNombre,userApellido,userCorreo,userTelefono,userPassword);
+                actualizarDatos(cuentaA);
             }
         });
 
@@ -68,7 +77,55 @@ public class configuracionDeCuenta extends AppCompatActivity {
         });
     }
 
+    public void actualizarDatos(CuentaModel cuentaA){
+        cuentaA.setId(userId);
+        cuentaA.setNombre(txtNombreConfigurarCuenta.getText().toString());
+        cuentaA.setApellido(txtApellidoConfigurarCuenta.getText().toString());
+        cuentaA.setTelefono(txtTelefonoConfigurarCuenta.getText().toString());
+        cuentaA.setCorreo(txtCorreoConfigurarCuenta.getText().toString());
+        cuentaA.setPassword(txtContrasenaConfigurarCuenta.getText().toString());
+        controller.actualizarCuenta(cuentaA, new CuentaController.VolleyResponseListener() {
+            @Override
+            public void onError(String mensaje) {
+                Toast.makeText(configuracionDeCuenta.this, mensaje, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onResponse(Object respuesta) {
+                try{
+                    JSONObject obj = new JSONObject(respuesta.toString());
+                    if(respuesta.toString().length()>0){
+
+                        /*String contrasena = obj.getString("fecha");
+                        String repetirContrasena = obj.getString("hora");
+                        String costototal = obj.getString("costototal");*/
+                        if(txtContrasenaConfigurarCuenta.getText().toString().trim().equals(txtRepetirContrasenaConfigurarCuenta.getText().toString().trim())){
+
+
+                            Toast.makeText(configuracionDeCuenta.this, "Cambios realizados", Toast.LENGTH_SHORT).show();
+
+                            Intent i = new Intent(getBaseContext(), vista_inicio.class);
+                            i.putExtra("userId",userId);
+                            startActivity(i);
+
+                        }else{
+                            Toast.makeText(configuracionDeCuenta.this, "Las contraseñas no coinciden.", Toast.LENGTH_SHORT).show();
+                        }
+
+                    }else{
+                        Toast.makeText(configuracionDeCuenta.this, "Hubo un error al realizar la petición", Toast.LENGTH_SHORT).show();
+                    }
+
+
+                }catch(JSONException e){
+                    e.printStackTrace();
+                }
+            }
+        });
+    }
+
     public void cargarDatos(CuentaModel cuenta){
+        cuenta.setId(userId);
         controller.verCuenta(cuenta, new CuentaController.VolleyResponseListener() {
             @Override
             public void onError(String mensaje) {
@@ -85,6 +142,7 @@ public class configuracionDeCuenta extends AppCompatActivity {
                         String apellido = obj.getString("apellido");
                         String telefono = obj.getString("telefono");
                         String correo = obj.getString("correo");
+                        String password = obj.getString("password");
                         /*String contrasena = obj.getString("fecha");
                         String repetirContrasena = obj.getString("hora");
                         String costototal = obj.getString("costototal");*/
@@ -93,21 +151,13 @@ public class configuracionDeCuenta extends AppCompatActivity {
                         txtApellidoConfigurarCuenta.setText(apellido);
                         txtTelefonoConfigurarCuenta.setText(telefono);
                         txtCorreoConfigurarCuenta.setText(correo);
-
+                        //txtContrasenaConfigurarCuenta.setText(password);
+                        //txtRepetirContrasenaConfigurarCuenta.setText(password);
 
                     }else{
                         Toast.makeText(configuracionDeCuenta.this, "Hubo un error al realizar la petición", Toast.LENGTH_SHORT).show();
                     }
 
-                    /*String mensaje = obj.getString("respuesta");
-                    String code = obj.getString("code");
-                    if(mensaje.equals("OK")){
-                        Toast.makeText(VerCita.this, "Cita agendada con éxito", Toast.LENGTH_SHORT).show();
-                        //System.out.println(obj.toString());
-                        //redirigir hacia activity principal
-                    }else{
-                        System.out.println("ERROR");
-                    }*/
 
                 }catch(JSONException e){
                     e.printStackTrace();
