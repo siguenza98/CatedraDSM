@@ -3,6 +3,7 @@ package sv.edu.udb.catedradsm;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +15,8 @@ public class vista_inicio extends AppCompatActivity {
     private Button btnVerCitas;
     private Button btnConfigurarCuenta;
     private Button btnCerrarSesion;
+    SharedPreferences sharedpreferences;
+
 
 
     @Override
@@ -57,10 +60,18 @@ public class vista_inicio extends AppCompatActivity {
             }
         });
 
+        sharedpreferences = getSharedPreferences("usuario", 0);
+
         btnCerrarSesion.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
+                SharedPreferences.Editor editor = sharedpreferences.edit();
+                editor.clear();
+                editor.commit(); // commit changes
+                Toast.makeText(vista_inicio.this, "Ha cerrado sesión.", Toast.LENGTH_SHORT).show();
 
+                Intent i = new Intent(getBaseContext(), Login.class);
+                startActivity(i);
             }
         });
     }

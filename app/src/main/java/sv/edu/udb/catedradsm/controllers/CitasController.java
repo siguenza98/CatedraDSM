@@ -45,19 +45,25 @@ public class CitasController {
             datos.put("fecha",cita.getFecha());
             datos.put("hora",cita.getHora());
             datos.put("costototal",cita.getCosto());
+            datos.put("estado",1);
+
+            System.out.println("metodo agendar desde el controller");
 
             JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, datos,new Response.Listener<JSONObject>() {
                 @Override
                 public void onResponse(JSONObject response) {
                     try{
+                        System.out.println("exito: "+response);
                         volleyResponseListener.onResponse(response);
                     }catch(Exception e){
+                        System.out.println("excepcion: "+e.toString());
                         Toast.makeText(context, "Hubo un error al realizar la petición", Toast.LENGTH_SHORT).show();
                     }
                 }
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
+                    System.out.println("responseerror: "+error.toString());
                     volleyResponseListener.onError("Hubo un error al realizar la petición.");
                 }
 

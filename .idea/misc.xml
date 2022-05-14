@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Daniel/Documents/DSM/Proyecto/app/src/main/res/layout/activity_agendar_cita.xml" value="0.33" />
+        <entry key="..\:/Users/Daniel/Documents/DSM/CatedraDSM-Daniel/app/src/main/res/layout/activity_agendar_cita.xml" value="0.25" />
+        <entry key="..\:/Users/Daniel/Documents/DSM/CatedraDSM-Xenia/app/src/main/res/layout/activity_agendar_cita.xml" value="0.25" />
+        <entry key="..\:/Users/Daniel/Documents/DSM/Proyecto/app/src/main/res/layout/activity_agendar_cita.xml" value="0.25" />
         <entry key="..\:/Users/Daniel/Documents/DSM/Proyecto/app/src/main/res/layout/activity_cita_layout.xml" value="0.171875" />
         <entry key="..\:/Users/Daniel/Documents/DSM/Proyecto/app/src/main/res/layout/activity_configuracion_de_cuenta.xml" value="0.18" />
         <entry key="..\:/Users/Daniel/Documents/DSM/Proyecto/app/src/main/res/layout/activity_crear_cuenta.xml" value="0.2957427536231884" />
