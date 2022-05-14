@@ -68,19 +68,10 @@ public class CuentaController {
     }
 
     public void verCuenta(CuentaModel cuenta, VolleyResponseListener volleyResponseListener){
-<<<<<<< HEAD
-=======
-        url = "https://udbdsmapi.000webhostapp.com/api/user/11";
-
->>>>>>> 96e67c62cf57c9a853910334d79c416ae3a80264
         JSONObject datos = new JSONObject();
+        url = "https://udbdsmapi.000webhostapp.com/api/user/"+cuenta.getId();
         try{
-
             datos.put("id",cuenta.getId());
-<<<<<<< HEAD
-            url = "https://udbdsmapi.000webhostapp.com/api/user/"+cuenta.getId();
-=======
->>>>>>> 96e67c62cf57c9a853910334d79c416ae3a80264
             JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, datos,new Response.Listener<JSONObject>() {
                 @Override
                 public void onResponse(JSONObject response) {
@@ -101,9 +92,39 @@ public class CuentaController {
         }catch(JSONException e){
             e.printStackTrace();
         }
+    }
 
+    public void actualizarCuenta(CuentaModel actualizarCuenta, VolleyResponseListener volleyResponseListener){
+        JSONObject datos = new JSONObject();
+        password = sha256(actualizarCuenta.getPassword());
+        url = "http://udbdsmapi.000webhostapp.com/api/user/update";
+        try{
+            datos.put("iduser",actualizarCuenta.getId());
+            datos.put("nombre",actualizarCuenta.getNombre());
+            datos.put("apellido",actualizarCuenta.getApellido());
+            datos.put("correo",actualizarCuenta.getCorreo());
+            datos.put("telefono",actualizarCuenta.getTelefono());
+            datos.put("password", password);
+            JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, datos,new Response.Listener<JSONObject>() {
+                @Override
+                public void onResponse(JSONObject response) {
+                    try{
+                        volleyResponseListener.onResponse(response);
+                    }catch(Exception e){
+                        Toast.makeText(context, "Se arruinó", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    volleyResponseListener.onError("Hubo un error al realizar la petición.");
+                }
 
-
+            });
+            ConexionModel.getInstance(context).addToRequestQueue(request);
+        }catch(JSONException e){
+            e.printStackTrace();
+        }
     }
 
     public static String sha256(final String base) {
