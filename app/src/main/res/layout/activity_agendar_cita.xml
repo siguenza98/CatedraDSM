@@ -19,7 +19,7 @@
         android:src="@drawable/tijera" />
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:gravity="center_horizontal"
         android:text="@string/cita_titulo"
         android:textColor="#646464"
@@ -39,8 +39,47 @@
             android:textColorHint="#646464"
             android:hint="@string/cita_sucursal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/cita_sucursal"
+            android:textColor="#646464"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <Spinner
+            android:id="@+id/spSucursal"
+            android:background="#FFCDD2"
+            android:textColor="#646464"
+            android:textColorHint="#646464"
+            android:hint="@string/cita_sucursal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:dropDownHeight="60dp"
+            android:spinnerMode="dropdown"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/cita_estilista"
+            android:textColor="#646464"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <Spinner
+            android:id="@+id/spEstilista"
+            android:background="#FFCDD2"
+            android:textColor="#646464"
+            android:textColorHint="#646464"
+            android:hint="@string/cita_sucursal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:dropDownHeight="60dp"
+            android:spinnerMode="dropdown"/>
+
     </com.google.android.material.textfield.TextInputLayout>
+
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -53,7 +92,8 @@
             android:textColorHint="#646464"
             android:hint="@string/cita_estilista"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="10dp"
+            android:visibility="gone"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -67,7 +107,26 @@
             android:textColorHint="#646464"
             android:hint="@string/cita_motivo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="10dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/cita_motivo"
+            android:textColor="#646464"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+        <Spinner
+            android:id="@+id/spMotivo"
+            android:background="#FFCDD2"
+            android:textColor="#646464"
+            android:textColorHint="#646464"
+            android:hint="@string/cita_sucursal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:dropDownHeight="60dp"
+            android:spinnerMode="dropdown"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout

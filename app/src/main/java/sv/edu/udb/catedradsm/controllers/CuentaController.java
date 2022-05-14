@@ -68,12 +68,11 @@ public class CuentaController {
     }
 
     public void verCuenta(CuentaModel cuenta, VolleyResponseListener volleyResponseListener){
-        url = "https://udbdsmapi.000webhostapp.com/api/user/11";
-
         JSONObject datos = new JSONObject();
         try{
 
             datos.put("id",cuenta.getId());
+            url = "https://udbdsmapi.000webhostapp.com/api/user/"+cuenta.getId();
             JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, datos,new Response.Listener<JSONObject>() {
                 @Override
                 public void onResponse(JSONObject response) {

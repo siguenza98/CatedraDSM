@@ -187,14 +187,12 @@
 
     <Button
         android:id="@+id/btnGuardarConfiguracion"
-        style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+        android:backgroundTint="@color/white"
+        android:textColor="#646464"
         android:layout_width="265dp"
         android:layout_height="38dp"
-        android:background="#EDEAEA"
-        android:backgroundTint="#EDEAEA"
         android:backgroundTintMode="add"
         android:text="@string/btn_guardar_datos_configuracion_de_cuenta"
-        android:textColor="#646464"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -204,14 +202,12 @@
 
     <Button
         android:id="@+id/btnVolverAInicio"
-        style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+        android:backgroundTint="@color/white"
+        android:textColor="#646464"
         android:layout_width="265dp"
         android:layout_height="38dp"
-        android:background="#EDEAEA"
-        android:backgroundTint="#EDEAEA"
         android:backgroundTintMode="add"
         android:text="@string/btn_volver_a_inicio_configuracion_de_cuenta"
-        android:textColor="#646464"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
